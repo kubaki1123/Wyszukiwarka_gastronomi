@@ -1,0 +1,11 @@
+﻿#include <iostream>
+#include"interfejs.h"
+
+int main()
+{
+	interfejs();
+
+
+
+
+}

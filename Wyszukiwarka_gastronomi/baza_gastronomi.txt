@@ -1,0 +1,6 @@
+nazwa cena ocena rodzaj
+sake $ 4.1 tajska
+santorini $$ 4.7 wloska
+cynamonka $ 4.6 polska
+Labo $$$ 5.0 wloska
+aperitivo $$ 4.2 wloska
