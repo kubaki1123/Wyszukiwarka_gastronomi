@@ -27,12 +27,13 @@ public:
 	}
 	
 	void print() {
-		std::cout << nazwa <<'\t' << cena <<'\t' << ocena <<'\t' << rodzaj << std::endl;
+		std::cout << nazwa <<'\t' << cena << '\t' << ocena << '\t' << rodzaj << std::endl;
 	}
 
 };
 
-void read(){
+std::vector<restauracja> read(){
+
 	kategorie kategorie;
 	std::vector<restauracja>gastro_vector;
 	std::fstream plik;
@@ -40,6 +41,8 @@ void read(){
 	std::string cena_plik;
 	double ocena_plik;
 	std::string rodzaj_plik;
+	
+	
 
 	plik.open("baza_gastronomi.txt", std::ios::in);
 	if (plik.is_open()==true) {
@@ -48,7 +51,7 @@ void read(){
 
 	plik >> kategorie.nazwa_kat >> kategorie.cena_kat >> kategorie.ocena_kat >> kategorie.rodzaj_kuchni_kat;
 
-	std::cout << kategorie.nazwa_kat << '\t' << kategorie.cena_kat << '\t' << kategorie.ocena_kat << '\t' << kategorie.rodzaj_kuchni_kat << '\t' << std::endl;
+	std::cout << kategorie.nazwa_kat << '\t'<< kategorie.cena_kat << '\t' << kategorie.ocena_kat << '\t' << kategorie.rodzaj_kuchni_kat << '\t' << std::endl;
 
 	while (true) {
 		if (plik.eof()) {
@@ -56,17 +59,17 @@ void read(){
 		}
 		plik >> nazwa_plik >> cena_plik >> ocena_plik >> rodzaj_plik;
 
-		restauracja restauracja(nazwa_plik, cena_plik, ocena_plik, rodzaj_plik);
+		restauracja restauracja_obj(nazwa_plik, cena_plik, ocena_plik, rodzaj_plik);
 
-		gastro_vector.push_back(restauracja);
+		restauracja_obj.print();
 
-		restauracja.print();
+		gastro_vector.push_back(restauracja_obj);
 
 		
-	}
 
+	}
 	
 
-
+	return gastro_vector;
 
 }

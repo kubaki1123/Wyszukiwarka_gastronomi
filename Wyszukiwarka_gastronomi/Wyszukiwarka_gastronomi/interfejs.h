@@ -1,11 +1,19 @@
 #pragma once
 #include<iostream>
+#include "baza_gastronomi.h"
+#include"find.h"
+
+
 void interfejs();
 
-void interfejs_wyszukiwarka() {
+void interfejs_wyszukiwarka(std::vector<restauracja> ref) {
 	int wybor;
+	std::string nazwa;
+	std::cout << "podaj nazwe" << std::endl;
+	std::cin >> nazwa;
+	find(ref,nazwa);
 
-
+	
 	std::cout << "powrot: 0" << std::endl;
 	std::cin >> wybor;
 	if (wybor == 0) {
@@ -66,11 +74,11 @@ void interfejs_filtry() {
 
 }
 
-void interfejs_przegladaj() {
+std::vector<restauracja> interfejs_przegladaj() {
 	int wybor;
-
-
-
+	
+	
+	std::vector<restauracja> ref=read();
 	std::cout << "powrot: 0" << std::endl;
 	std::cin >> wybor;
 	if (wybor == 0) {
@@ -79,11 +87,13 @@ void interfejs_przegladaj() {
 	else {
 		std::cout << "podano zly numer" << std::endl;
 	}
+	return ref;
 }
 
 
 void interfejs() {
 	int wybor;
+	std::vector<restauracja> ref;
 	std::cout << "Witaj w wyszukiwarce gastronomi" << std::endl;
 	std::cout << "1: Wyszukaj po nazwie" << std::endl;
 	std::cout << "2: Dodaj nowa restauracje" << std::endl;
@@ -93,7 +103,7 @@ void interfejs() {
 	std::cin >> wybor;
 	switch (wybor) {
 	case 1:
-		interfejs_wyszukiwarka();
+		interfejs_wyszukiwarka(ref);
 		break;
 	case 2:
 		interfejs_dodaj();
@@ -102,7 +112,7 @@ void interfejs() {
 		interfejs_filtry();
 		break;
 	case 4:
-		interfejs_przegladaj();
+		 ref = interfejs_przegladaj();
 		break;
 	default:
 		std::cout << "podano zly numer" << std::endl;

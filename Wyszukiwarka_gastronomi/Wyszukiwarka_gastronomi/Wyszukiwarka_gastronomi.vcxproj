@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="baza_gastronomi.h" />
+    <ClInclude Include="find.h" />
     <ClInclude Include="interfejs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
