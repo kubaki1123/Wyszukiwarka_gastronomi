@@ -127,6 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="baza_gastronomi.cpp" />
+    <ClCompile Include="find.cpp" />
+    <ClCompile Include="interfejs.cpp" />
     <ClCompile Include="Wyszukiwarka_gastronomi.cpp" />
   </ItemGroup>
   <ItemGroup>
