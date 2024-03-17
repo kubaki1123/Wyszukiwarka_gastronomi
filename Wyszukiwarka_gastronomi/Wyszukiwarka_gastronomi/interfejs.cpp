@@ -5,7 +5,8 @@ void interfejs_wyszukiwarka(std::vector<restauracja> ref) {
 	std::string nazwa;
 	std::cout << "podaj nazwe" << std::endl;
 	std::cin >> nazwa;
-	x::findx(ref, nazwa);
+	
+	find(ref, nazwa);
 
 
 	std::cout << "powrot: 0" << std::endl;
@@ -73,9 +74,14 @@ std::vector<restauracja> interfejs_przegladaj() {
 
 
 	std::vector<restauracja> ref = read();
+
+	std::cout << ref[0].get_nazwa() << std::endl;
+	
+
 	std::cout << "powrot: 0" << std::endl;
 	std::cin >> wybor;
 	if (wybor == 0) {
+		
 		interfejs();
 	}
 	else {
@@ -92,6 +98,8 @@ void interfejs() {
 	std::cout << "2: Dodaj nowa restauracje" << std::endl;
 	std::cout << "3: Filtry" << std::endl;
 	std::cout << "4: Przegladaj" << std::endl;
+	
+	
 
 	std::cin >> wybor;
 	switch (wybor) {
@@ -105,11 +113,14 @@ void interfejs() {
 		interfejs_filtry();
 		break;
 	case 4:
-		ref = interfejs_przegladaj();
+	{
+		std::vector<restauracja> ref = interfejs_przegladaj();
 		break;
+	}
 	default:
 		std::cout << "podano zly numer" << std::endl;
 		interfejs();
 		break;
 	}
+	
 }

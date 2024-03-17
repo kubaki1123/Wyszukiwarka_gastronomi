@@ -10,6 +10,19 @@ restauracja::restauracja(std::string nazwa_plik, std::string cena_plik, double o
 void restauracja::print() {
 	std::cout << nazwa << '\t' << cena << '\t' << ocena << '\t' << rodzaj << std::endl;
 }
+std::string restauracja::get_nazwa() {
+	return nazwa;
+}
+std::string restauracja::get_cena() {
+	return cena;
+}
+double restauracja::get_ocena() {
+	return ocena;
+}
+std::string restauracja::get_rodzaj() {
+	return rodzaj;
+}
+
 
 std::vector<restauracja> read() {
 
@@ -47,8 +60,7 @@ std::vector<restauracja> read() {
 
 
 	}
-
-
+	
 	return gastro_vector;
-
+	
 }

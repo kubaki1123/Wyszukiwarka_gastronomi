@@ -23,6 +23,11 @@ public:
 	
 	void print();
 
+	std::string get_nazwa();
+	std::string get_cena();
+	double get_ocena();
+	std::string get_rodzaj();
+
 };
 
 std::vector<restauracja> read();
