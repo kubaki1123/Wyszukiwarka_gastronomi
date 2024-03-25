@@ -43,7 +43,7 @@ std::vector<restauracja> read() {
 
 	plik >> kategorie.nazwa_kat >> kategorie.cena_kat >> kategorie.ocena_kat >> kategorie.rodzaj_kuchni_kat;
 
-	std::cout << kategorie.nazwa_kat << '\t' << kategorie.cena_kat << '\t' << kategorie.ocena_kat << '\t' << kategorie.rodzaj_kuchni_kat << '\t' << std::endl;
+	
 
 	while (true) {
 		if (plik.eof()) {
@@ -53,7 +53,7 @@ std::vector<restauracja> read() {
 
 		restauracja restauracja_obj(nazwa_plik, cena_plik, ocena_plik, rodzaj_plik);
 
-		restauracja_obj.print();
+		
 
 		gastro_vector.push_back(restauracja_obj);
 

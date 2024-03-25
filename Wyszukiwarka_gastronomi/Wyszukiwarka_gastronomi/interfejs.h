@@ -12,7 +12,9 @@ void interfejs_dodaj();
 
 void interfejs_filtry();
 
-std::vector<restauracja> interfejs_przegladaj();
+void interfejs_przegladaj(std::vector<restauracja>ref);
+
+void print_all(std::vector<restauracja>ref);
 
 
 

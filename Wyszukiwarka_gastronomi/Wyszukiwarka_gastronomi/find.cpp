@@ -11,7 +11,8 @@ void find(std::vector<restauracja> ref, std::string nazwa) {
 		strnazwa = nazwa.c_str();
 
 		if (std::strcmp(strnazwa, strref) == 0) {
-			std::cout << "jebac stare baby" << std::endl;
+			std::cout << ref[i].get_nazwa() << '\t' << ref[i].get_cena() << '\t' << ref[i].get_ocena() << '\t' << ref[i].get_rodzaj() << std::endl;
+
 		}
 
 	}

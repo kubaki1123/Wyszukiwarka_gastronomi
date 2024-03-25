@@ -69,13 +69,21 @@ void interfejs_filtry() {
 
 }
 
-std::vector<restauracja> interfejs_przegladaj() {
+void print_all(std::vector<restauracja> ref)
+{
+	kategorie kategorie;
+	std::cout << kategorie.nazwa_kat << '\t' << kategorie.cena_kat << '\t' << kategorie.ocena_kat << '\t' << kategorie.rodzaj_kuchni_kat << '\t' << std::endl;
+
+	for (int i = 0; i < ref.size(); i++) {
+		std::cout << ref[i].get_nazwa() << '\t' << ref[i].get_cena() << '\t' << ref[i].get_ocena() << '\t' << ref[i].get_rodzaj() << std::endl;
+	}
+}
+
+void interfejs_przegladaj(std::vector<restauracja>ref) {
 	int wybor;
 
-
-	std::vector<restauracja> ref = read();
-
-	std::cout << ref[0].get_nazwa() << std::endl;
+	print_all(ref);
+	
 	
 
 	std::cout << "powrot: 0" << std::endl;
@@ -87,12 +95,12 @@ std::vector<restauracja> interfejs_przegladaj() {
 	else {
 		std::cout << "podano zly numer" << std::endl;
 	}
-	return ref;
+	
 }
 
 void interfejs() {
 	int wybor;
-	std::vector<restauracja> ref;
+	static std::vector<restauracja> ref=read();
 	std::cout << "Witaj w wyszukiwarce gastronomi" << std::endl;
 	std::cout << "1: Wyszukaj po nazwie" << std::endl;
 	std::cout << "2: Dodaj nowa restauracje" << std::endl;
@@ -114,7 +122,8 @@ void interfejs() {
 		break;
 	case 4:
 	{
-		std::vector<restauracja> ref = interfejs_przegladaj();
+		interfejs_przegladaj(ref);
+		
 		break;
 	}
 	default:

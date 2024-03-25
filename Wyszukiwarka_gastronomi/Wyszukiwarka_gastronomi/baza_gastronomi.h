@@ -4,13 +4,7 @@
 #include <vector>
 #include <string>
 
-struct kategorie {
-	std::string nazwa_kat;
-	std::string cena_kat;
-	std::string ocena_kat;
-	std::string rodzaj_kuchni_kat;
 
-};
 
 class restauracja {
 	std::string nazwa;
@@ -28,6 +22,13 @@ public:
 	double get_ocena();
 	std::string get_rodzaj();
 
+};
+struct kategorie {
+	std::string nazwa_kat;
+	std::string cena_kat;
+	std::string ocena_kat;
+	std::string rodzaj_kuchni_kat;
+	friend void print_all(std::vector<restauracja> ref);
 };
 
 std::vector<restauracja> read();
