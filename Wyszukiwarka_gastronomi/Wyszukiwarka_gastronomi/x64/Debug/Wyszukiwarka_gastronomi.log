@@ -1,2 +1,3 @@
-﻿  find.cpp
-  Wyszukiwarka_gastronomi.vcxproj -> C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\x64\Debug\Wyszukiwarka_gastronomi.exe
+﻿  cena.cpp
+C:\Users\kplew\OneDrive\Pulpit\projekt\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\cena.cpp(69,13): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  Wyszukiwarka_gastronomi.vcxproj -> C:\Users\kplew\OneDrive\Pulpit\projekt\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\x64\Debug\Wyszukiwarka_gastronomi.exe

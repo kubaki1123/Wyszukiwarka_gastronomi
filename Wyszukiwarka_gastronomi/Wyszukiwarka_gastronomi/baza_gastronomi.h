@@ -22,6 +22,12 @@ public:
 	double get_ocena();
 	std::string get_rodzaj();
 
+	void set_cena(std::string price);
+	void set_nazwa(std::string name);
+	void set_ocena(double rate);
+	void set_rodzaj(std::string type);
+	
+
 };
 struct kategorie {
 	std::string nazwa_kat;

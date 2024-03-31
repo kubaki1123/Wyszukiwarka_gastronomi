@@ -23,6 +23,29 @@ std::string restauracja::get_rodzaj() {
 	return rodzaj;
 }
 
+void restauracja::set_cena(std::string price)
+{
+	cena = price;
+}
+void restauracja::set_nazwa(std::string name) {
+	nazwa = name;
+}
+
+void restauracja::set_ocena(double rate)
+{
+	ocena = rate;
+}
+
+void restauracja::set_rodzaj(std::string type)
+{
+	rodzaj = type;
+}
+
+
+
+
+
+
 
 std::vector<restauracja> read() {
 
@@ -64,3 +87,5 @@ std::vector<restauracja> read() {
 	return gastro_vector;
 	
 }
+
+

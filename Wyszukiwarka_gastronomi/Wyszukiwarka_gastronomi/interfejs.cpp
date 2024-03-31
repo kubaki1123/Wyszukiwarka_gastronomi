@@ -34,13 +34,14 @@ void interfejs_dodaj() {
 	}
 }
 
-void interfejs_filtry() {
+void interfejs_filtry(std::vector<restauracja>ref) {
 	int wybor;
 	std::cout << "wybierz rodzaj filtru" << std::endl;
 	std::cout << "1: cena w gore " << std::endl;
 	std::cout << "2: cena w dol" << std::endl;
-	std::cout << "3: ocena" << std::endl;
-	std::cout << "4: rodzaj kuchni(kraj)" << std::endl;
+	std::cout << "3: ocena w gore" << std::endl;
+	std::cout << "4: ocena w dol" << std::endl;
+	std::cout << "5: rodzaj kuchni(kraj)" << std::endl;
 
 	std::cout << "powrot: 0" << std::endl;
 	std::cin >> wybor;
@@ -50,15 +51,18 @@ void interfejs_filtry() {
 		interfejs();
 		break;
 	case 1:
-
+		cena_w_gore(ref);
 		break;
 	case 2:
-
+		cena_w_dol(ref);
 		break;
 	case 3:
-
+		
 		break;
 	case 4:
+
+		break;
+	case 5:
 
 		break;
 	default:
@@ -118,7 +122,7 @@ void interfejs() {
 		interfejs_dodaj();
 		break;
 	case 3:
-		interfejs_filtry();
+		interfejs_filtry(ref);
 		break;
 	case 4:
 	{

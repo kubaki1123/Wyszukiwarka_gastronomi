@@ -2,7 +2,7 @@
 #include<iostream>
 #include "baza_gastronomi.h"
 #include"find.h"
-
+#include"cena.h"
 
 void interfejs();
 
