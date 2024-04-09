@@ -3,6 +3,7 @@
 #include "baza_gastronomi.h"
 #include"find.h"
 #include"cena.h"
+#include"ocena.h"
 
 void interfejs();
 

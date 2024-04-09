@@ -1,3 +1,12 @@
-﻿  cena.cpp
-C:\Users\kplew\OneDrive\Pulpit\projekt\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\cena.cpp(69,13): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
-  Wyszukiwarka_gastronomi.vcxproj -> C:\Users\kplew\OneDrive\Pulpit\projekt\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\x64\Debug\Wyszukiwarka_gastronomi.exe
+﻿  Wyszukiwarka_gastronomi.cpp
+  cena.cpp
+C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\cena.cpp(77,45): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\cena.cpp(89,47): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\cena.cpp(93,13): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  interfejs.cpp
+  ocena.cpp
+C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\ocena.cpp(65,41): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\ocena.cpp(82,45): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\ocena.cpp(87,13): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  Generowanie kodu...
+  Wyszukiwarka_gastronomi.vcxproj -> C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\x64\Debug\Wyszukiwarka_gastronomi.exe

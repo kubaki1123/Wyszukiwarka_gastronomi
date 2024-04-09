@@ -57,10 +57,10 @@ void interfejs_filtry(std::vector<restauracja>ref) {
 		cena_w_dol(ref);
 		break;
 	case 3:
-		
+		ocena_w_gore(ref);
 		break;
 	case 4:
-
+		ocena_w_dol(ref);
 		break;
 	case 5:
 
