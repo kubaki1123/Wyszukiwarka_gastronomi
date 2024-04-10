@@ -19,20 +19,7 @@ void interfejs_wyszukiwarka(std::vector<restauracja> ref) {
 	}
 }
 
-void interfejs_dodaj() {
-	int wybor;
 
-
-
-	std::cout << "powrot: 0" << std::endl;
-	std::cin >> wybor;
-	if (wybor == 0) {
-		interfejs();
-	}
-	else {
-		std::cout << "podano zly numer" << std::endl;
-	}
-}
 
 void interfejs_filtry(std::vector<restauracja>ref) {
 	int wybor;
@@ -62,9 +49,13 @@ void interfejs_filtry(std::vector<restauracja>ref) {
 	case 4:
 		ocena_w_dol(ref);
 		break;
-	case 5:
-
+	case 5: {
+		std::string nazwa;
+		std::cout << "podaj typ restauracji" << std::endl;
+		std::cin >> nazwa;
+		find_type(ref, nazwa);
 		break;
+	}
 	default:
 		std::cout << "podano zly numer" << std::endl;
 		break;
@@ -88,7 +79,6 @@ void interfejs_przegladaj(std::vector<restauracja>ref) {
 
 	print_all(ref);
 	
-	
 
 	std::cout << "powrot: 0" << std::endl;
 	std::cin >> wybor;
@@ -102,6 +92,21 @@ void interfejs_przegladaj(std::vector<restauracja>ref) {
 	
 }
 
+void interfejs_dodaj() {
+	int wybor;
+
+	dodaj_restauracje();
+
+
+	std::cout << "powrot: 0" << std::endl;
+	std::cin >> wybor;
+	if (wybor == 0) {
+		interfejs();
+	}
+	else {
+		std::cout << "podano zly numer" << std::endl;
+	}
+}
 void interfejs() {
 	int wybor;
 	static std::vector<restauracja> ref=read();
@@ -127,7 +132,6 @@ void interfejs() {
 	case 4:
 	{
 		interfejs_przegladaj(ref);
-		
 		break;
 	}
 	default:

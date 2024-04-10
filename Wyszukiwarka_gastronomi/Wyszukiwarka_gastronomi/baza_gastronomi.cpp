@@ -43,10 +43,6 @@ void restauracja::set_rodzaj(std::string type)
 
 
 
-
-
-
-
 std::vector<restauracja> read() {
 
 	kategorie kategorie;
@@ -85,7 +81,7 @@ std::vector<restauracja> read() {
 	}
 	
 	return gastro_vector;
-	
+	plik.close();
 }
 
 

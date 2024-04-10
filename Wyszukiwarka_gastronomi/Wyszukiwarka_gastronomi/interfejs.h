@@ -4,6 +4,8 @@
 #include"find.h"
 #include"cena.h"
 #include"ocena.h"
+#include"findtype.h"
+#include"dodaj.h"
 
 void interfejs();
 
