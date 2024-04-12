@@ -2,7 +2,7 @@
 
 void dodaj_restauracje() {
 	AddRestauracja AddRestauracja;
-	std::cout << "aby dodac restauracje podaj nastepujace rzeczy,nazwa:"<<std::endl;
+	std::cout << "aby dodac restauracje podaj nastepujace rzeczy,nazwa(jezeli nazwa jest wielocz czlonowa oddziel czlony znakiem _):"<<std::endl;
 	std::cout << "cena(jako znak $ od 1  do 3):" << std::endl;
 	std::cout << "ocena(jako np. 5.0):" << std::endl;
 	std::cout << "rodzaj(jako kraj pochodzenia):" << std::endl;

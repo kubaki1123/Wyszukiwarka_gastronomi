@@ -6,7 +6,9 @@
 int main()
 {
 	
-	interfejs();
+	static std::vector<restauracja> ref = read();
+	InterfejsInterfejs Interfejs;
+	Interfejs.interfejs(ref);
 
 	
 
