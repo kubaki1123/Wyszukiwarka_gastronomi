@@ -1,20 +1,25 @@
 #include "findtype.h"
 
-void find_type(std::vector<restauracja>ref, std::string nazwa) {
+void find_type(Node& ref, std::string nazwa) {
+		Node* node = new Node();
+		node = &ref;
 
-	for (int i = 0; i < ref.size(); i++) {
-		std::string name = ref[i].get_rodzaj();
-		const char* strref;
-		const char* strnazwa;
-		strref = name.c_str();
-		strnazwa = nazwa.c_str();
+		while (node != nullptr) {
 
-		if (std::strcmp(strnazwa, strref) == 0) {
-			std::cout << ref[i].get_nazwa() << '\t' << ref[i].get_cena() << '\t' << ref[i].get_ocena() << '\t' << ref[i].get_rodzaj() << std::endl;
+			std::string name = node->data.rodzaj;
+			const char* strref;
+			const char* strnazwa;
+			strref = name.c_str();
+			strnazwa = nazwa.c_str();
 
+			if (std::strcmp(strnazwa, strref) == 0) {
+
+				std::cout << node->data.nazwa << '\t' << node->data.cena << '\t' << node->data.ocena << '\t' << node->data.rodzaj << std::endl;
+
+			}
+
+			node = node->next;
 		}
 
-	}
-
-
 }
+

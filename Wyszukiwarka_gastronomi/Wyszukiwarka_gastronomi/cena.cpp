@@ -1,99 +1,128 @@
 #include"cena.h"
 
-std::vector<restauracja> SortPrice::PriceUp(int first, int last, std::vector<restauracja>ref) {
-	
+Node SortPrice::PriceUp(Node& ref) {
 	std::string bufor_cena;
 	std::string bufor_nazwa;
 	std::string bufor_rodzaj;
 	double bufor_ocena;
-	std::vector<restauracja>res;
+	Node* node = new Node();
+	node = &ref;
 
-	
-	for (int i = 0; i < ref.size() - 1; i++) {
-		if (ref[i].get_cena() >= ref[i + 1].get_cena()) {
+	while (node != nullptr) {
+		if (node->next != nullptr) {
+			if (node->data.cena >= node->next->data.cena) {
 
-			bufor_cena = ref[i].get_cena();
-			bufor_nazwa = ref[i].get_nazwa();
-			bufor_rodzaj = ref[i].get_rodzaj();
-			bufor_ocena = ref[i].get_ocena();
-
-			ref[i].set_cena(ref[i + 1].get_cena());
-			ref[i].set_nazwa(ref[i + 1].get_nazwa());
-			ref[i].set_rodzaj(ref[i + 1].get_rodzaj());
-			ref[i].set_ocena(ref[i + 1].get_ocena());
+				bufor_cena = node->data.cena;
+				bufor_nazwa = node->data.nazwa;
+				bufor_rodzaj = node->data.rodzaj;
+				bufor_ocena = node->data.ocena;
 
 
-			ref[i + 1].set_cena(bufor_cena);
-			ref[i + 1].set_nazwa(bufor_nazwa);
-			ref[i + 1].set_rodzaj(bufor_rodzaj);
-			ref[i + 1].set_ocena(bufor_ocena);
+				node->data.cena = node->next->data.cena;
+				node->data.nazwa = node->next->data.nazwa;
+				node->data.rodzaj = node->next->data.rodzaj;
+				node->data.ocena = node->next->data.ocena;
 
+
+				node->next->data.cena = bufor_cena;
+				node->next->data.nazwa = bufor_nazwa;
+				node->next->data.rodzaj = bufor_rodzaj;
+				node->next->data.ocena = bufor_ocena;
+			}
+			node = node->next;
 		}
+		else {
+
+			return *node;
+		}
+
 	}
-	return ref;
+
 }
 
-std::vector<restauracja> SortPrice::PriceDown(int first, int last, std::vector<restauracja>ref) {
-
+Node SortPrice::PriceDown(Node& ref) {
 	std::string bufor_cena;
 	std::string bufor_nazwa;
 	std::string bufor_rodzaj;
 	double bufor_ocena;
-	std::vector<restauracja>res;
+	Node* node = new Node();
+	node = &ref;
+
+	while (node != nullptr) {
+		if (node->next != nullptr) {
+			if (node->data.cena >= node->next->data.cena) {
+
+				bufor_cena = node->data.cena;
+				bufor_nazwa = node->data.nazwa;
+				bufor_rodzaj = node->data.rodzaj;
+				bufor_ocena = node->data.ocena;
 
 
-	for (int i = 0; i < ref.size() - 1; i++) {
-		if (ref[i].get_cena() >= ref[i + 1].get_cena()) {
-
-			bufor_cena = ref[i].get_cena();
-			bufor_nazwa = ref[i].get_nazwa();
-			bufor_rodzaj = ref[i].get_rodzaj();
-			bufor_ocena = ref[i].get_ocena();
-
-			ref[i].set_cena(ref[i + 1].get_cena());
-			ref[i].set_nazwa(ref[i + 1].get_nazwa());
-			ref[i].set_rodzaj(ref[i + 1].get_rodzaj());
-			ref[i].set_ocena(ref[i + 1].get_ocena());
+				node->data.cena = node->next->data.cena;
+				node->data.nazwa = node->next->data.nazwa;
+				node->data.rodzaj = node->next->data.rodzaj;
+				node->data.ocena = node->next->data.ocena;
 
 
-			ref[i + 1].set_cena(bufor_cena);
-			ref[i + 1].set_nazwa(bufor_nazwa);
-			ref[i + 1].set_rodzaj(bufor_rodzaj);
-			ref[i + 1].set_ocena(bufor_ocena);
-
+				node->next->data.cena = bufor_cena;
+				node->next->data.nazwa = bufor_nazwa;
+				node->next->data.rodzaj = bufor_rodzaj;
+				node->next->data.ocena = bufor_ocena;
+			}
+			node = node->next;
 		}
-	}
+		else {
 
+			return *node;
+		}
 
-	return ref;
-}
-
-
-
-
-void cena_w_gore(std::vector<restauracja> ref) {
-	SortPrice SortPrice;
-	for (int i = 0; i < ref.size() - 1; i++) {
-		ref = SortPrice.PriceUp(i, ref.size() - 1 - i, ref);
-	}
-
-	for (int i = 0; i < ref.size(); i++) {
-		std::cout << ref[i].get_nazwa() << '\t' << ref[i].get_cena() << '\t' << ref[i].get_ocena() << '\t' << ref[i].get_rodzaj() << std::endl;
 	}
 
 }
 
-void cena_w_dol(std::vector<restauracja> ref) {
+
+
+
+void cena_w_gore(Node& ref) {
 	SortPrice SortPrice;
-	for (int i = 0; i < ref.size() - 1; i++) {
-		ref = SortPrice.PriceDown(i, ref.size() - 1 - i, ref);
+	
+	 Node* node = new Node();
+	 node = &ref;
+
+	 while (node != nullptr) {
+		 SortPrice.PriceUp(ref);
+		 node = node->next;
+	 }
+
+	 node = &ref;
+
+	 while (node != nullptr) {
+
+		 std::cout << node->data.nazwa << '\t' << node->data.cena << '\t' << node->data.ocena << '\t' << node->data.rodzaj << std::endl;
+
+		 node = node->next;
+	 }
+}
+
+void cena_w_dol(Node& ref) {
+	SortPrice SortPrice;
+	
+	Node* node = new Node();
+	node = &ref;
+
+	while (node != nullptr) {
+		SortPrice.PriceDown(ref);
+		node = node->next;
 	}
 
+	node = &ref;
 
-	for (int i = ref.size()-1; i >= 0; i--) {
-		std::cout << ref[i].get_nazwa() << '\t' << ref[i].get_cena() << '\t' << ref[i].get_ocena() << '\t' << ref[i].get_rodzaj() << std::endl;
+	while (node->tail != nullptr) {
+
+		std::cout << node->tail->data.nazwa << '\t' << node->tail->data.cena << '\t' << node->tail->data.ocena << '\t' << node->tail->data.rodzaj << std::endl;
+
+		node->tail = node->tail->prev;
+
 	}
-
-
 
 }

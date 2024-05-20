@@ -1,0 +1,26 @@
+#include"find.h"
+
+
+void find(Node* noderef, std::string nazwa) {
+
+
+	while (noderef->next != nullptr) {
+		std::string name = noderef->data.nazwa;
+		const char* strref;
+		const char* strnazwa;
+		strref = name.c_str();
+		strnazwa = nazwa.c_str();
+
+		if (std::strcmp(strnazwa, strref) == 0) {
+			std::cout << noderef->data.nazwa << '\t' << noderef->data.cena << '\t' << noderef->data.ocena << '\t' << noderef->data.rodzaj << std::endl;
+
+		}
+
+
+	}
+
+};
+
+
+
+

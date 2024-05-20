@@ -133,6 +133,7 @@
     <ClCompile Include="find.cpp" />
     <ClCompile Include="findtype.cpp" />
     <ClCompile Include="interfejs.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="ocena.cpp" />
     <ClCompile Include="Wyszukiwarka_gastronomi.cpp" />
   </ItemGroup>
@@ -143,6 +144,7 @@
     <ClInclude Include="find.h" />
     <ClInclude Include="findtype.h" />
     <ClInclude Include="interfejs.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ocena.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,0 +1,22 @@
+#include "findtype.h"
+
+void find_type(Node& ref, std::string nazwa) {
+
+		while (ref.next != nullptr) {
+
+			std::string name = ref.data.rodzaj;
+			const char* strref;
+			const char* strnazwa;
+			strref = name.c_str();
+			strnazwa = nazwa.c_str();
+
+
+			if (std::strcmp(strnazwa, strref) == 0) {
+				std::cout << ref.data.nazwa << '\t' << ref.data.cena << '\t' << ref.data.ocena << '\t' << ref.data.rodzaj << std::endl;
+
+			}
+		}
+	
+
+}
+

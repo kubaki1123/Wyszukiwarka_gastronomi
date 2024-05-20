@@ -3,7 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
-
+#include "LinkedList.h"
 
 
 class restauracja {
@@ -14,6 +14,8 @@ class restauracja {
 
 public:
 	restauracja(std::string nazwa_plik, std::string cena_plik, double ocena_plik, std::string rodzaj_plik);
+
+	
 	
 	void print();
 
@@ -27,7 +29,8 @@ public:
 	void set_ocena(double rate);
 	void set_rodzaj(std::string type);
 	
-
+	
+	
 };
 struct kategorie {
 	std::string nazwa_kat;
@@ -36,5 +39,6 @@ struct kategorie {
 	std::string rodzaj_kuchni_kat;
 	friend void print_all(std::vector<restauracja> ref);
 };
+Data DataFill(restauracja obj);
 
-std::vector<restauracja> read();
+Node read();

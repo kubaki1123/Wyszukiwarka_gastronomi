@@ -5,7 +5,7 @@
 #include"baza_gastronomi.h"
 
 
-void find(std::vector<restauracja> ref, std::string nazwa);
+void find(Node& ref, std::string nazwa);
 
 
 
