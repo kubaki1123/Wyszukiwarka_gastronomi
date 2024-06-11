@@ -1,4 +1,4 @@
-﻿  cena.cpp
-C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\cena.cpp(81): warning C4715: "SortPrice::PriceDown”: niewszystkie ścieżki kodu zwracają wartość
-C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\cena.cpp(41): warning C4715: "SortPrice::PriceUp”: niewszystkie ścieżki kodu zwracają wartość
-  Wyszukiwarka_gastronomi.vcxproj -> C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\x64\Debug\Wyszukiwarka_gastronomi.exe
+﻿  ocena.cpp
+C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\ocena.cpp(25): warning C4715: "SortRank::RankUp”: niewszystkie ścieżki kodu zwracają wartość
+C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\ocena.cpp(49): warning C4715: "SortRank::RankDown”: niewszystkie ścieżki kodu zwracają wartość
+  Wyszukiwarka_gastronomi.vcxproj -> C:\Users\kplew\Desktop\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\Wyszukiwarka_gastronomi\x64\Debug\Wyszukiwarka_gastronomi.exe

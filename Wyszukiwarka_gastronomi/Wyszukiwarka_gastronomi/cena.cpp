@@ -1,33 +1,18 @@
 #include"cena.h"
 
 Node SortPrice::PriceUp(Node& ref) {
-	std::string bufor_cena;
-	std::string bufor_nazwa;
-	std::string bufor_rodzaj;
-	double bufor_ocena;
+	Data data_buf;
 	Node* node = new Node();
 	node = &ref;
 
 	while (node != nullptr) {
 		if (node->next != nullptr) {
 			if (node->data.cena >= node->next->data.cena) {
+				data_buf = node->data;
 
-				bufor_cena = node->data.cena;
-				bufor_nazwa = node->data.nazwa;
-				bufor_rodzaj = node->data.rodzaj;
-				bufor_ocena = node->data.ocena;
+				node->data = node->next->data;
 
-
-				node->data.cena = node->next->data.cena;
-				node->data.nazwa = node->next->data.nazwa;
-				node->data.rodzaj = node->next->data.rodzaj;
-				node->data.ocena = node->next->data.ocena;
-
-
-				node->next->data.cena = bufor_cena;
-				node->next->data.nazwa = bufor_nazwa;
-				node->next->data.rodzaj = bufor_rodzaj;
-				node->next->data.ocena = bufor_ocena;
+				node->next->data = data_buf;
 			}
 			node = node->next;
 		}
@@ -41,33 +26,18 @@ Node SortPrice::PriceUp(Node& ref) {
 }
 
 Node SortPrice::PriceDown(Node& ref) {
-	std::string bufor_cena;
-	std::string bufor_nazwa;
-	std::string bufor_rodzaj;
-	double bufor_ocena;
+	Data data_buf;
 	Node* node = new Node();
 	node = &ref;
 
 	while (node != nullptr) {
 		if (node->next != nullptr) {
 			if (node->data.cena >= node->next->data.cena) {
+				data_buf = node->data;
 
-				bufor_cena = node->data.cena;
-				bufor_nazwa = node->data.nazwa;
-				bufor_rodzaj = node->data.rodzaj;
-				bufor_ocena = node->data.ocena;
+				node->data = node->next->data;
 
-
-				node->data.cena = node->next->data.cena;
-				node->data.nazwa = node->next->data.nazwa;
-				node->data.rodzaj = node->next->data.rodzaj;
-				node->data.ocena = node->next->data.ocena;
-
-
-				node->next->data.cena = bufor_cena;
-				node->next->data.nazwa = bufor_nazwa;
-				node->next->data.rodzaj = bufor_rodzaj;
-				node->next->data.ocena = bufor_ocena;
+				node->next->data = data_buf;
 			}
 			node = node->next;
 		}
@@ -79,7 +49,6 @@ Node SortPrice::PriceDown(Node& ref) {
 	}
 
 }
-
 
 
 

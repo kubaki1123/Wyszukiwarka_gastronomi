@@ -18,7 +18,7 @@ public:
 	Node* next=nullptr;
 	Node* head;
 	Node* tail = nullptr;
-	
+	Data operator=(Data data);
 
 	Node nodeCreate(Data dataobj,Node& node);
 
